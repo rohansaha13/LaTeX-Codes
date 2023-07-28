@@ -1,0 +1,382 @@
+%-------------------------
+% Resume in Latex
+% Author : Puneet Gautam, puneet.gautam0206@gmail.com, punitrajgautam@uiit.ac.in
+% License : MIT
+%MIT License
+
+%Copyright (c) 2023 Puneet Gautam
+
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+
+%The above copyright notice and this permission notice shall be included in all
+%copies or substantial portions of the Software.
+
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%SOFTWARE.
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=0.5cm, top=0.5cm, right=0.5cm, bottom=0.5cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1},\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Rohan Saha} % Your Name
+\newcommand{\course}{Bachelor of Technology} % Your Course
+\newcommand{\roll}{20085086} % Your Roll No.
+\newcommand{\phone}{7093227957} % Your Phone Number
+\newcommand{\emaila}{rohan.saha.eee20@itbhu.ac.in} %Email 1
+\newcommand{\emailb}{rohan.saha.eee20@itbhu.ac.in} %Email 2
+\newcommand{\github}{https://github.com/rohansaha13} %Github
+%\newcommand{\website}{https://www.yourwebsite.com} %Website
+\newcommand{\linkedin}{https://www.linkedin.com/in/rohansaha13/} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{iit-varanasi-bhu-logo.png}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  
+  {\textbf{B.Tech} | Major: \textbf{Electrical Engg.} | Minor: \textbf{Computer Science}} &  \href{mailto:rohan.saha.eee20@itbhu.ac.in}{\textbf{rohan.saha.eee20@itbhu.ac.in} }\\
+   {Indian Institute of Technology (BHU), Varanasi} &  {\href{https://github.com/rohansaha13}{\color{blue}GitHub}, {\href{https://www.linkedin.com/in/rohansaha13/}{\color{blue}LinkedIn}}} \\ %$|$ \href{\website}{Website}\\
+\end{tabularx}
+}
+
+\vspace{-5mm}
+%-------------SUMMARY-----------------
+\section{\textbf{Summary}}
+Actively Searching for \textbf{Entry-Level Roles} in \textbf{Data Science/Data Analysis/ML} | Main Skill Sets include \textbf{Python, Jupyter, SQL \& Power BI} | \textbf{UnderGraduate} in \textbf{Electrical Engineering} from \textbf{IIT(BHU), Varanasi} with a \textbf{Minor in CS} | Passionate \& Quick at learning new skills and adapting to new environments. Love contributing to projects of scale and impact, and leading new initiatives.
+
+
+%-----------EDUCATION-----------------
+\section{\textbf{Education}}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-2mm\relax}{|c|C|c|c|c|}
+  \hline
+  \textbf{Degree} & \textbf{Institute} & \textbf{Board / University} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech & Indian Institute of Technology (BHU), Varanasi & IIT (BHU) & 9.08 (Till Sem-VI) & 2020-Present\\
+ 
+  \hline
+  Senior Secondary & SVC Jr. College, Visakhapatnam & BIEAP & 95.50\% & 2020 \\
+  \hline
+  Secondary & DPS, Visakhapatnam & CBSE & 94.00\% & 2018 \\
+  \hline
+\end{tabularx}}
+\vspace{-1mm}
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {EXL}{Noida, India}
+      {\textbf{Data Analyst-Intern} | Team : Decision Analytics}{May'23 - July'23}
+      \resumeItemListStart
+        \item {Designed \& Developed an \textbf{LLM Playbook}  for Clients, integrating various LLMs into an Internal Portal for numerous Usecases}
+        \item {Worked on Experimenting, Selecting \& Integrating LLMs [\textbf{StarCoder, CodeT5, FalCoder}] for \textbf{Code Generation \& Technical Assistant}}
+        \item{Offered a \textbf{Return Full Time Offer} with the Same Team based on my Performance}
+        \item {\textbf{Exposure} : LLMs, Generative AI, Hugging Face API, Streamlit}
+      \resumeItemListEnd
+    
+%    \vspace{-1mm}
+%    \resumeSubheading
+%      {Company Name}{Location}
+%      {Position}{June 2021 - July 2021}
+%      \resumeItemListStart
+%    \item {About work}
+%    \item {About Work}
+%    \resumeItemListEnd
+    
+    
+    % \item {More work done } .....
+
+    
+  
+      
+  \resumeSubHeadingListEnd
+\vspace{-6.5mm}
+%-----------PROJECTS-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Event Detection in a Power Microgrid using Deep Learning} %Project Name
+      {\textbf{Exploratory Project} | Supervisor : Dr. Soumya Ranjan Mohanty, Dept. of Electrical Engineering, IITBHU} %Project Name, Location Name
+      {Jan'22 - May'22} %Event Dates
+      {\href{https://github.com/rohansaha13/Event-Detection-in-a-Power-Microgrid-using-Deep-Learning}{\color{blue}GitHub}} %Website
+      \resumeItemListStart
+        \item {Curated a \textbf{Self-Developed Dataset} by Simulating a Small-Scale Power Microgrid on \textbf{MATLAB} \& its faults}
+        \item {Built our \textbf{ANN Model} using \textbf{Keras} with Concepts of \textbf{Optimizers, Categorical Cross-Entropy \& Activation Functions} to fetch Accuracies of \textbf{95\%+} \& Min. Categorical Cross-Entropy Loss of \textbf{0.43} across 500 Epochs}
+        \item {\textbf{Exposure} : Python, Tensorflow, Keras, MATLAB}
+      \resumeItemListEnd
+    
+     \vspace{-1mm}
+     
+    \resumeProject
+      {Autonomous Electric Vehicle 'Shivaay', Team Averera} %Project Name
+      {An \textbf{SAE Level-3 Autonomous Vehicle}, going to compete in \textbf{Shell Eco-Marathon}'23 On-Track in Indonesia} %Project Name, Location Name
+      {Oct'21 - May'23} %Event Dates
+      {\href{Github Link}{\textbf{ }}} %Website
+      \resumeItemListStart
+        \item {Led my \textbf{Electronics Team} around Sensors [UWB, IMU \& RTK-GPS], Micro-Controllers \& Micro-Processors, Power \& Data Architectures, Safety Systems, Sensor \& CPU Upbringing, Benchmarking \& Testing}
+        \item {\textbf{Exposure} : ROS, Arduino \& Raspberry Pi Programming, CAD}
+      \resumeItemListEnd
+
+    \vspace{-1mm}
+    
+     \resumeProject
+      {Autonomous Health Assistance Integrated Sub-System (HAIS)} %Project Name
+      {\textbf{Ranked 1st Asia-Pacific Region} in Shell Eco-Marathon \textbf{Pitch The Future}'22, winning \textbf{USD 1,000}} %Project Name, Location Name
+      {Jan'22 - Feb'22} %Event Dates
+      {\href{https://drive.google.com/file/d/1UXdYO_uDDIsdAa-NxEuVNXzTK-xdW_-x/view}{\color{blue}Report}} %Website
+      \resumeItemListStart
+        \item {HAIS is a \textbf{Stand-Alone Subsystem} of Wearable Wristband \& Seatbelt Sensors, Power Source, Processor \& Cloud Storage that works with an Autonomous Vehicle [AV] to provide \textbf{Autonomous Aid to Passengers} during any \textbf{Medical Emergency}}
+        \item {Project consists of Core Electronics, Vital Medical Sensors, In-House Trained ML Models, AI-Integrated Subsystems \& Fully Autonomous Motion-Planning | {\href{https://drive.google.com/file/d/1UXdYO_uDDIsdAa-NxEuVNXzTK-xdW_-x/view}{\color{blue}Project Report}} | {\href{https://drive.google.com/file/d/1qJZIHZrw1EuKlfnxLEnNx8D3rzRpLsOB/view}{\color{blue}Project Video}}}
+      \resumeItemListEnd
+    
+   
+      
+\resumeSubHeadingListEnd
+\vspace{-7.5mm}
+
+\section{\textbf{Technical Skills}}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages} % Category
+    { C/C++, Python}
+    
+    %\vspace{-0.5mm}
+    
+ \resumeSubItem{Tools and Technologies} % Category
+    {Jupyter, Anaconda, SQL, Tableau, Power BI, AWS, Visual Studio, Figma} % Skills
+    
+    %\vspace{-0.5mm}
+    
+ % \resumeSubItem{Operating Systems} % Category
+ %    {Windows, Linux \& Android} % Skills
+    
+    %\vspace{-0.5mm}
+    
+ 
+    \resumeHeadingSkillEnd
+
+\vspace{-1.5mm}
+
+% \section{\textbf{Key courses taken}}
+% \resumeHeadingSkillStart
+%  \resumeSubItem{CSE \& Maths} % Category
+%     {Introduction to C, Fundamentals of Computers, Object Oriented Paradigm in C++, Data Structures and Algorithms, Computer Organization \& Architecture, Python Programming, Operating System, Database Management System, Statistical Methods, Discrete Mathematics, Numerical Methods, Computer Networks \& Security, Software Engineering, Compiler Design, Computer Graphics \& Multimedia}
+%     %\vspace{-0.5mm}
+%  \resumeSubItem{Others}
+%  {Basic Electronics \& Electrical Engineering, Engineering Drawing, Digital Electronics, Principle of Engineering Economics and Management, Microprocessor: Theory \& Applications}
+% %  \resumeSubItem{Electrical and Electronics} % Category
+% %     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+% \resumeHeadingSkillEnd
+
+% \vspace{-1mm}
+%---------------CERTIFICATIONS-------------------
+\section{\textbf{Certifications}}
+    \resumeItemListStart
+        \item {Advanced \textbf{Software Engineering} Virtual Experience Program | \textbf{Walmart Global Tech} | {\href{https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Walmart%20India/H5qXk7hxAEaiD8qMr_Walmart%20India_mNMgak5aCPCzpyJEb_1685016536514_completion_certificate.pdf}{\color{blue}{Certificate}}}}
+        \item {\textbf{Cybersecurity \& Cloud Computing} Program | \textbf{Mastercard} | {\href{https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_Mastercard_mNMgak5aCPCzpyJEb_1685043248091_completion_certificate.pdf}{\color{blue}{Certificate}}}}
+        \item {Introduction to \textbf{Cloud Computing} on \textbf{AWS} | \textbf{Udemy} | {\href{https://www.udemy.com/certificate/UC-5eb3df48-a47b-463c-9384-ac39faa49352/}{\color{blue}{Certificate}}}}
+    \resumeItemListEnd
+\vspace{-4mm}
+
+% %-----------TRAINING-----------------
+% \section{\textbf{Vocational Training}}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Institution Name}{Location}
+%       {Course Name}{Start Time-EndTime}
+%       \resumeItemListStart
+%         \item {About course, blah blah}
+%         \item {About course, blah blah}
+%       \resumeItemListEnd 
+%     % \resumeSubHeadingListEnd
+
+
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+  \resumePOR{Electronics Team Lead} % Position
+    {Team Averera, IITBHU} %Club,Event
+    {Oct'21 - May'23} %Tenure Period
+    \resumeItemListStart
+    \item{Contributed to our \textbf{Autonomous Vehicle 'Shivaay' \& Electric Urban Concept Vehicle}}
+    \item{\textbf{Globally Ranked 1st} among 250+ Teams from 40+ Countries, in the Prestigious \textbf{Shell Eco-Marathon} Virtual League'21, winning a Cash Prize of \textbf{USD 3,000}} 
+    \item{\textbf{Ranked 1st} in \textbf{Asia Pacific \& Middle East Region} in \textbf{Shell Eco-Marathon} Quiz'22 \& Pitch The Future'22, Cash Prize of \textbf{USD 1,000}}
+    \resumeItemListEnd
+    
+  \resumePOR{Marketing Executive} % Position
+    {Kashiyatra'22, IITBHU} %Club,Event
+    {Nov'21 - May'22} %Tenure Period
+    \resumeItemListStart
+    \item{Kashiyatra is one of the \textbf{Largest Socio-Cultural Fests} of India, with a \textbf{Footfall of 75,000+}}
+    \item{Secured Marketing Deals worth a \textbf{Cumulative INR 4.5Lac+}}
+    \resumeItemListEnd
+
+    \resumePOR{Creative Team Lead} % Position
+    {Prastuti'22, IITBHU} %Club,Event
+    {Dec'21 - May'22}
+    \resumeItemListStart
+    \item{Prastuti is the \textbf{Annual Technical Fest} of Department of \textbf{Electrical Engineering}, IITBHU, with a \textbf{Footfall of 20,000+}}
+    \resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+
+\section{\textbf{Miscellaneous}}
+\vspace{-0.1mm}
+
+\resumeSubHeadingListStart
+\resumePOR{B.Tech} % Award
+    {Achieved CGPA of \textbf{9.08}, Top-10 among a Batch of 160 Students} % Event
+    {2020-24} %Event Year
+\vspace{-0.1mm}
+\resumePOR{Dr. B.R.Ambedkar Merit Scholarship} % Award
+    {Scholarship offered to the Meritorious Children of the Employees of RINL-VSP\\Visakhapatnam Steel Plant, based on JEE \& NEET} % Event
+    {2020-24} %Event Year
+\vspace{-0.1mm}
+\resumeSubHeadingListEnd
+%-------------------------------------------
+%\vfill
+% \center{\footnotesize Last updated: \today}
+
+\end{document}
